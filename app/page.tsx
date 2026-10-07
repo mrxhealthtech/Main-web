@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ArrowRight, ChevronDown, Menu, X, Activity, Bluetooth, ShieldCheck, Database, Fingerprint, Wifi, Check, Play, Minus } from 'lucide-react'
+import { ArrowRight, ChevronDown, Menu, X, Activity, Bluetooth, ShieldCheck, Database, Fingerprint, Wifi, Check, Play, Minus, Phone } from 'lucide-react'
 
 function TypingHeading({ text, className = '' }: { text: string; className?: string }) {
   const [displayText, setDisplayText] = useState('')
@@ -58,9 +58,9 @@ export default function Page() {
           <a className="wordmark" href="#top"><img src="/logo.png" alt="MRX Health Tech" className="logo-image" /></a>
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
             {navItems.map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
-            <a className="mobile-cta" href="#contact">Request a Demo <ArrowRight size={15} /></a>
+            <a className="mobile-cta" href="mailto:dnyaneshmagare7@gmail.com">Request a Demo <ArrowRight size={15} /></a>
           </div>
-          <div className="nav-actions"><a href="#contact" className="button button-small">Request a Demo <ArrowRight size={15} /></a></div>
+          <div className="nav-actions"><a href="mailto:dnyaneshmagare7@gmail.com" className="button button-small">Request a Demo <ArrowRight size={15} /></a></div>
           <button className="menu-button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
         </nav>
       </header>
@@ -73,7 +73,7 @@ export default function Page() {
             <h1><TypingHeading text="Smarter TB monitoring." /><br /><em>Connected clinical insight.</em></h1>
             <p className="hero-lead"><TypingHeading text="Point-of-care biomarker monitoring designed for a more connected TB care journey." className="typing-text-sm" /></p>
             <p className="hero-body">MRX HealthTech combines point-of-care diagnostics, biomarker monitoring and connected digital workflows to help healthcare teams follow patient progress with greater clarity.</p>
-            <div className="hero-actions"><a className="button" href="#contact">Request a Demo <ArrowRight size={17} /></a><a className="text-link" href="#ip10">Explore IP-10 <ArrowRight size={17} /></a></div>
+            <div className="hero-actions"><a className="button" href="mailto:dnyaneshmagare7@gmail.com">Request a Demo <ArrowRight size={17} /></a><a className="text-link" href="#ip10">Explore IP-10 <ArrowRight size={17} /></a></div>
             <div className="trust-line"><ShieldCheck size={17} /> Designed for connected, longitudinal patient monitoring</div>
           </div>
           <div className="hero-product hero-device-clean reveal reveal-delay">
@@ -108,9 +108,10 @@ export default function Page() {
 
       <section className="about section" id="about"><div className="container"><div className="center-heading"><div className="section-kicker">LEADERSHIP <span /></div><h2>Meet the <span>founders.</span></h2></div><div className="team-grid"><div className="team-card"><img src="/founder.jpg" alt="Mokshada Desale" className="team-photo" /><div className="team-info"><h3>Mokshada Desale</h3><p className="team-title">Founder & CEO | MRX HealthTECH</p><p className="team-desc">As Founder & CEO, Mokshada drives MRX HealthTECH's healthcare innovation and technology vision, bridging clinical needs with medical-device development and scalable healthcare solutions.</p><div className="team-focus"><span>MedTech Strategy</span><span>Medical Devices</span><span>Healthcare Innovation</span><span>Product Development</span></div></div></div><div className="team-card"><img src="/cofounder.jpg" alt="Dnyanesh Manoj Magare" className="team-photo" /><div className="team-info"><h3>Dnyanesh Manoj Magare</h3><p className="team-title">Co-Founder & MD | Tech Team Lead</p><p className="team-desc">As Co-Founder, MD, and Tech Team Lead at MRX HealthTech, Dnyanesh drives the company's technology vision and engineering operations.</p><div className="team-focus"><span>Tech Strategy</span><span>Cybersecurity</span><span>HealthTech Architecture</span></div><a href="mailto:dnyaneshmagare7@gmail.com" className="team-email">dnyaneshmagare7@gmail.com</a></div></div></div></div></section>
 
-      <section className="cta" id="contact"><div className="cta-orb" /><div className="container cta-inner"><div><div className="section-kicker light-kicker">START A CONVERSATION <span /></div><h2>Let&apos;s build the future of<br /><span>connected patient monitoring.</span></h2><p>Explore how MRX HealthTech can support your clinical monitoring workflow.</p></div><div className="cta-actions"><a className="button button-white" href="mailto:hello@mrxhealthtech.com">Request a Demo <ArrowRight size={17} /></a><a className="cta-contact" href="mailto:hello@mrxhealthtech.com">Contact MRX <ArrowRight size={16} /></a></div></div></section>
+      <section className="cta" id="contact"><div className="cta-orb" /><div className="container cta-inner"><div><div className="section-kicker light-kicker">START A CONVERSATION <span /></div><h2>Let&apos;s build the future of<br /><span>connected patient monitoring.</span></h2><p>Explore how MRX HealthTech can support your clinical monitoring workflow.</p></div><div className="cta-actions"><a className="button button-white" href="mailto:dnyaneshmagare7@gmail.com">Request a Demo <ArrowRight size={17} /></a><a className="cta-contact" href="mailto:dnyaneshmagare7@gmail.com">Contact MRX <ArrowRight size={16} /></a></div></div></section>
 
       <footer className="footer"><div className="container footer-top"><a className="wordmark footer-mark" href="#top"><img src="/logo.png" alt="MRX Health Tech" className="logo-image" /></a><p>Connected technology for smarter patient monitoring.</p><div className="footer-links">{navItems.slice(0,5).map(([l,h])=><a key={l} href={h}>{l}</a>)}<a href="#about">About</a><a href="#contact">Contact</a></div></div><div className="container footer-bottom"><span>© 2026 MRX HealthTech. All rights reserved.</span><div><a href="#top">Privacy</a><a href="#top">Terms</a></div></div></footer>
+      <a href="tel:+919409962060" className="floating-phone"><Phone size={24} /></a>
     </main>
   )
 }
